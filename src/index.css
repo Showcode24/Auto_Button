@@ -1,10 +1,98 @@
-.Button{
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Roboto:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
+
+.Button {
   margin-top: 13.1%;
   text-align: center;
- }
+  font-family: 'DM Serif Text', serif;
+  font-family: 'Roboto', sans-serif;
+}
 
-.Button button{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.navbar p{
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: rgb(116, 116, 116);
+  margin: 0%;
+  margin-left: 180px;
+  padding-top: 10px;
+}
+
+.navbar{
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  height: 20px;
+  display: flex;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 15px;
+  margin-left: 500px;
+  ;
+}
+
+li{
+  display: inline;
+  margin-right: 40px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: rgb(116, 116, 116);
+}
+
+.Bod{
+  height: 300px;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.Bod h1{
+  font-family: 'DM Serif Text', serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: rgb(88, 88, 88);
+  text-align: left;
+  padding: 80px;
+  margin-left: 100px;
+  line-height: 60px;
+}
+
+
+.Bod h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(0, 41, 0);
+  text-align: left;
+}
+
+.Bod p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgb(116, 116, 116);
+  text-align: left;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+.Button button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   width: 6cm;
   height: 1.5cm;
@@ -14,4 +102,4 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: none;
   cursor: pointer;
 }
-
+*/
