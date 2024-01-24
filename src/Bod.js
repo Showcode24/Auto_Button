@@ -1,22 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ContentList from "./contentList";
 const Bod = () => {
-    const[contents, setContents] = useState (
+    const [contents, setContents] = useState(
         [
-            {id: 1, author: "Tobi", title: "Italian Marble Wood", body:"Lore Ipsum...."},
-            {id: 2, author: "Emmanuel", title: "Dawnish Walnut", body:"Lore Ipsum...."},
-            {id: 3, author: "Ayooluwa", title: "African Fibre", body:"Lore Ipsum...."}
+            { id: 1, author: "Tobi", title: "Italian Marble Wood", body: "Lore Ipsum...." },
+            { id: 2, author: "Emmanuel", title: "Dawnish Walnut", body: "Lore Ipsum...." },
+            { id: 3, author: "Ayooluwa", title: "African Fibre", body: "Lore Ipsum...." }
         ]
     );
-    return ( 
+
+    const [course, setCourse] = useState('frontend')
+
+    useEffect(()=>{
+        console.log('useEffect ran')
+    }, [course])
+
+    
+    const handleDelete = (id) => {
+        console.log('The id of the clickedd blog is', id)
+
+        const filteredcontents = contents.filter((contents, index) => contents.id !==id)
+        setContents(filteredcontents)
+    }
+    return (
         <div className="Bod">
             <h1>The Furniture <br></br>you would love</h1>
-            {contents.map((contents, index)=>(
-                <div className="board" key={contents.id}>
-                    <h2>Title: {contents.title}</h2>
-                    <p>Written by {contents.author}</p>
-                </div>
-            ))}
+           <ContentList contents = {contents} handleDelete = {handleDelete} />
+           <button onClick={()=> setCourse ('backend')}>Click to Change Course</button>
+
+           <p>{ course }</p>
         </div>
-     );
-            }
+    );
+}
 export default Bod;

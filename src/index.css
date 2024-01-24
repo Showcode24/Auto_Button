@@ -77,9 +77,25 @@ li{
   font-weight: 400;
   color: rgb(116, 116, 116);
   text-align: left;
-  
 }
 
+.button {
+  display: flex;
+  text-align: left;
+  background-color: rgb(133, 170, 0);
+  width: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color:white;
+  padding: 10px, 20px;
+  border: none;
+}
+
+.button:hover{
+  background-color: gray;
+  color: white;
+}
 
 
 
