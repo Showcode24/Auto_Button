@@ -46,7 +46,7 @@ const Meth = () => {
     <div>
       <ul>
         {numbers.map((number, index) => (
-          <li key={index}>{number}</li>
+          <li key={number.id}>{number}</li>
         ))}
       </ul>
       <button onClick={addNumber}>Add Number</button>

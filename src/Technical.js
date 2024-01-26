@@ -1,5 +1,7 @@
 const Technical = () => {
-    return (  );
+    return ( 
+        <div className="Technical"></div>
+     );
 }
  
 export default Technical;
