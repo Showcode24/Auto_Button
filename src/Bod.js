@@ -8,7 +8,7 @@ const Bod = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch('http://localhost:7000/contentsz')
+            fetch('http://localhost:7000/contents')
                 .then((response) => {
                     if (!response.ok) {
                         throw Error('Service is currently busy. Please try again later')
@@ -25,7 +25,7 @@ const Bod = () => {
                     setLoading(false)
                 })
         }, 3000)
-    }, []);
+    }, []); //empty deendency array => run once
 
 
     return (
