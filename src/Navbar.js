@@ -7,11 +7,11 @@ const Navbar = () => {
             <p>NOVA</p>
             <div className="links">
             <ul>
-                <Link to='/'>Home</Link>
-                <li>Home</li>
-                <li>About</li>
-                <li>Furniture</li>
-                <li>Contact</li>
+                <Link to='/' className="links-text">Home</Link>
+                <Link to='/about' className="links-text">About</Link>
+                <Link to='/furniture' className="links-text">Furniture</Link>
+                <Link to='/contact' className="links-text">Contact</Link>
+                
                 <IoCartOutline />
             </ul>
             </div>

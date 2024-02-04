@@ -9,7 +9,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.navbar p{
+.navbar p {
   font-family: 'Barlow Condensed', sans-serif;
   text-align: left;
   font-size: 30px;
@@ -20,7 +20,7 @@
   padding-top: 10px;
 }
 
-.navbar{
+.navbar {
   background-color: #ffffff;
   padding: 0;
   margin: 0;
@@ -28,33 +28,34 @@
   display: flex;
 }
 
-.links{
+.links {
   list-style-type: none;
   padding: 0;
   margin: 15px;
   margin-left: 500px;
   display: flex;
+  text-decoration: none;
   ;
 }
 
-.link{
+.links-text {
   display: inline;
   margin-right: 40px;
-  color: white;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: rgb(116, 116, 116);
   text-decoration: none;
+  padding-left: 10px;
 }
 
-.Bod{
+.Bod {
   height: 300px;
   width: 100%;
   background-color: #f8f8f8;
 }
 
-.Bod h1{
+.Bod h1 {
   font-family: 'DM Serif Text', serif;
   font-size: 60px;
   font-weight: 400;
@@ -66,7 +67,7 @@
 }
 
 
-.Bod h2{
+.Bod h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   font-weight: 700;
@@ -74,7 +75,7 @@
   text-align: left;
 }
 
-.Bod p{
+.Bod p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: rgb(116, 116, 116);
@@ -89,16 +90,32 @@
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color:white;
+  color: white;
   padding: 10px, 20px;
   border: none;
 }
 
-.button:hover{
+.button:hover {
   background-color: gray;
   color: white;
 }
 
+.contact {
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(116, 116, 116);
+}
+
+.contact-link{
+  text-decoration: none ;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(116, 116, 116);
+
+}
 
 
 
