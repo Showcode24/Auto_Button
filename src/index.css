@@ -28,15 +28,16 @@
   display: flex;
 }
 
-ul{
+.links{
   list-style-type: none;
   padding: 0;
   margin: 15px;
   margin-left: 500px;
+  display: flex;
   ;
 }
 
-li{
+.link{
   display: inline;
   margin-right: 40px;
   color: white;
@@ -44,6 +45,7 @@ li{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: rgb(116, 116, 116);
+  text-decoration: none;
 }
 
 .Bod{
