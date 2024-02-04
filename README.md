@@ -1,3 +1,55 @@
+DON'T REPEAT YOURSELF
+DRY is a software development principle that promotes the idea of reducing redundancy in code. The main concept is to avoid duplicating code by creating reusable components or functions. By following the DRY principle, you can improve maintainability, reduce errors, and make your codebase more efficient.
+
+YAGNI (You Aren't Gonna Need It):
+YAGNI is a principle that advises against implementing features or functionalities until they are actually needed. It suggests that developers should avoid adding speculative features that may not be necessary for the current requirements.
+
+SOLID Principles:
+SOLID is an acronym that represents a set of five design principles aimed at creating maintainable and scalable software. These principles were introduced by Robert C. Martin and are widely used in object-oriented programming:
+
+Single Responsibility Principle (SRP):
+
+A class should have only one reason to change, meaning it should have only one responsibility. This principle encourages a class to be focused on a single task.
+Open/Closed Principle (OCP):
+
+Software entities (classes, modules, functions) should be open for extension but closed for modification. This encourages the use of interfaces or abstract classes, allowing new functionality to be added without altering existing code.
+Liskov Substitution Principle (LSP):
+
+Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. Subtypes must be substitutable for their base types.
+Interface Segregation Principle (ISP):
+
+A class should not be forced to implement interfaces it does not use. This principle suggests breaking interfaces into smaller, more specific ones to avoid unnecessary dependencies.
+Dependency Inversion Principle (DIP):
+
+High-level modules should not depend on low-level modules; both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions. This principle promotes the use of dependency injection and inversion of control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
