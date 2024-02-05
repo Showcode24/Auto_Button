@@ -1,22 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ContentList from "./contentList";
+import useFetch from "./hooks/use-Fetch";
+
+
 const Bod = () => {
-    const[contents, setContents] = useState (
-        [
-            {id: 1, author: "Tobi", title: "Italian Marble Wood", body:"Lore Ipsum...."},
-            {id: 2, author: "Emmanuel", title: "Dawnish Walnut", body:"Lore Ipsum...."},
-            {id: 3, author: "Ayooluwa", title: "African Fibre", body:"Lore Ipsum...."}
-        ]
-    );
-    return ( 
+    
+    const [course, setCourse] = useState('frontend')
+
+    const {contents, error, loading} = useFetch('http://localhost:7000/contents')
+  
+
+
+    return (
         <div className="Bod">
             <h1>The Furniture <br></br>you would love</h1>
-            {contents.map((contents, index)=>(
-                <div className="board" key={contents.id}>
-                    <h2>Title: {contents.title}</h2>
-                    <p>Written by {contents.author}</p>
-                </div>
-            ))}
+            {loading && <div>Loading...</div>}
+
+            {error && <div>{error}</div>}
+            
+            {contents && <ContentList contents={contents} />}
+            
+            {/* <button onClick={() => setCourse('backend')}>Click to Change Course</button> */}
+
+            <p>{course}</p>
         </div>
-     );
-            }
+    );
+}
 export default Bod;
