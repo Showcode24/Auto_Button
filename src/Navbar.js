@@ -11,7 +11,8 @@ const Navbar = () => {
                 <Link to='/about' className="links-text">About</Link>
                 <Link to='/furniture' className="links-text">Furniture</Link>
                 <Link to='/contact' className="links-text">Contact</Link>
-                
+                <Link to='/create' className="links-text">Create</Link>
+
                 <IoCartOutline />
             </ul>
             </div>
