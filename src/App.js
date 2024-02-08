@@ -24,7 +24,8 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/create' element={<Create />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/contents/:number'element={<ContentDetails />} />
+          <Route path='/contents/:id'element={<ContentDetails />} />
+          <Route path='/edit/:id' element={<Create />}/>
           <Route path='*' element={<NotFound />} />
         </Routes>
       

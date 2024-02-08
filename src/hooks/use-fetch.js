@@ -27,7 +27,7 @@ const useFetch = (url) => {
                     setLoading(false)
                 })
         }, 3000)
-    }, []); //empty deendency array => run once
+    }, [url]); //empty dependency array => run once
 
     return {contents, error, loading} 
 
