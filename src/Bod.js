@@ -1,12 +1,23 @@
 import { useEffect, useState } from "react";
 import ContentList from "./contentList";
+
 import useFetch from "./hooks/use-fetch";
+
+import useFetch from "./hooks/use-Fetch";
+
+
 
 const Bod = () => {
     
     const [course, setCourse] = useState('frontend')
 
+
   const {contents, error, loading} = useFetch('http://localhost:7000/contents');
+
+    const {contents, error, loading} = useFetch('http://localhost:7000/contents')
+  
+
+
 
     return (
         <div className="Bod">
