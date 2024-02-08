@@ -1,5 +1,6 @@
 const Create = () => {
     return ( 
+
         <div className="create">Add New Content 
         <form className="form">
             <label>
@@ -23,6 +24,9 @@ const Create = () => {
 <button type="submit">Submit a blog</button>
         </form>
         </div>
+
+        <div className="new">Add a New Content</div>
+ dev
      );
 }
  
