@@ -1,14 +1,22 @@
 import { useEffect, useState } from "react";
 import ContentList from "./contentList";
+
+import useFetch from "./hooks/use-fetch";
+
 import useFetch from "./hooks/use-Fetch";
+
 
 
 const Bod = () => {
     
     const [course, setCourse] = useState('frontend')
 
+
+  const {contents, error, loading} = useFetch('http://localhost:7000/contents');
+
     const {contents, error, loading} = useFetch('http://localhost:7000/contents')
   
+
 
 
     return (
@@ -17,9 +25,9 @@ const Bod = () => {
             {loading && <div>Loading...</div>}
 
             {error && <div>{error}</div>}
-            
+
             {contents && <ContentList contents={contents} />}
-            
+
             {/* <button onClick={() => setCourse('backend')}>Click to Change Course</button> */}
 
             <p>{course}</p>

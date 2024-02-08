@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Roboto:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
 
+
+/* https://github.com/Showcode24/Auto_Button/pull/2 */
 .Button {
   margin-top: 13.1%;
   text-align: center;
@@ -9,7 +11,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.navbar p{
+.navbar p {
   font-family: 'Barlow Condensed', sans-serif;
   text-align: left;
   font-size: 30px;
@@ -20,7 +22,7 @@
   padding-top: 10px;
 }
 
-.navbar{
+.navbar {
   background-color: #ffffff;
   padding: 0;
   margin: 0;
@@ -28,31 +30,34 @@
   display: flex;
 }
 
-ul{
+.links {
   list-style-type: none;
   padding: 0;
   margin: 15px;
-  margin-left: 500px;
+  margin-left: 400px;
+  display: flex;
+  text-decoration: none;
   ;
 }
 
-li{
+.links-text {
   display: inline;
   margin-right: 40px;
-  color: white;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: rgb(116, 116, 116);
+  text-decoration: none;
+  padding-left: 10px;
 }
 
-.Bod{
+.Bod {
   height: 300px;
   width: 100%;
   background-color: #f8f8f8;
 }
 
-.Bod h1{
+.Bod h1 {
   font-family: 'DM Serif Text', serif;
   font-size: 60px;
   font-weight: 400;
@@ -64,19 +69,52 @@ li{
 }
 
 
-.Bod h2{
+.Bod h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   font-weight: 700;
   color: rgb(0, 41, 0);
   text-align: left;
+
 }
 
-.Bod p{
+.Bod p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: rgb(116, 116, 116);
   text-align: left;
+}
+
+.link-content {
+  text-decoration: none;
+}
+
+.content-details h2 {
+  font-size: 20px;
+  color: #222222;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.content-details p {
+  font-size: 20px;
+  color: #222222;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.article-body {
+  color: #222222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+
+}
+
+.content-details div {
+  margin: 20px 0;
 }
 
 .button {
@@ -87,19 +125,90 @@ li{
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color:white;
+  color: white;
   padding: 10px, 20px;
   border: none;
 }
 
-.button:hover{
+.button:hover {
   background-color: gray;
   color: white;
 }
 
+.contact {
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(116, 116, 116);
+}
 
+.contact-link {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(116, 116, 116);
+}
 
+.form {
+  display: inline;
+   max-width: 100%;
+  }
 
+.create {
+  max-width: 100%;
+  margin-top: 100px;
+  margin-left: 400px;
+  margin-right: 400px;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px, 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: inline;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.create button:hover {
+  filter: invert(100%);
+}
+
+.create span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding-right: 8px;
+
+}
 
 
 
