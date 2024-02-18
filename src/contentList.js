@@ -21,7 +21,7 @@ const ContentList = ({ contents }) => (
 );
 
 ContentList.propTypes = {
-  blogs: PropTypes.arrayOf(
+  contents: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,

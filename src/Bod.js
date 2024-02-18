@@ -28,7 +28,7 @@ const Bod = () => {
 
       {loading && <div>Your item is being fetched</div>}
 
-      {error && <div className="error">{error}</div>}
+      {error && <div>{error}</div>}
 
       {contents && <ContentList contents={contents} />}
 

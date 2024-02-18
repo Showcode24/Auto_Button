@@ -4,25 +4,21 @@
       "title": "My first blog",
       "body": "This is my first bog post",
       "author": "Ayooluwa",
-      "id": "1"
+      "id": 1
     },
     {
       "title": "My Second blog",
       "body": "This is my second bog post",
       "author": "Emmanuel",
-      "id": "2"
+      "id": 2
     },
+    
     {
       "title": "My Second blog",
       "body": "This is my second bog post",
       "author": "Tobi",
-      "id": "3"
-    },
-    {
-      "id": "cbd9",
-      "title": "ererererer",
-      "author": "Tobi",
-      "body": "erererererere"
+      "id": 3
     }
+   
   ]
 }

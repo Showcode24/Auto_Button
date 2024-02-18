@@ -7,15 +7,15 @@ const useFetch = (url) => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(url)
+      fetch('http://localhost:7000/contents')
         .then((response) => {
           if (!response.ok) {
             throw Error('Server is busy. Please try again later.');
           }
           return response.json();
         })
-        .then((item) => {
-          setContents(item);
+        .then((contents) => {
+          setContents(contents);
           setLoading(false);
         })
         .catch((e) => {

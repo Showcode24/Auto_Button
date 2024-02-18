@@ -12,7 +12,7 @@ const Create = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:8000/blogs/${id}`)
+      fetch(`http://localhost:7000/contents/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setTitle(data.title);
@@ -24,10 +24,10 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoading();
 
     setTimeout(() => {
-      const newBlog = { title, author, body };
+      const newContent = { title, author, body };
 
       const postUrl = 'http://localhost:7000/contents';
       const putUrl = `http://localhost:7000/contents/${id}`;
@@ -37,7 +37,7 @@ const Create = () => {
       fetch(resolvedUrl, {
         method: id ? 'PUT' : 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newBlog),
+        body: JSON.stringify(newContent),
       })
         .then((res) => {
           res.json();
@@ -56,19 +56,19 @@ const Create = () => {
       </h2>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="blogTitle">
-          Blog Title:
+        <label htmlFor="contentTitle">
+          Content Title:
           <input
             type="text"
             required
-            id="blogTitle"
+            id="contentTitle"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
 
           />
         </label>
 
-        <label htmlFor="blogAuthor">
+        <label htmlFor="contentAuthor">
           Blog Author:
           <select
             value={author}
@@ -81,8 +81,8 @@ const Create = () => {
           </select>
         </label>
 
-        <label htmlFor="blogBody">
-          Blog Body:
+        <label htmlFor="contentBody">
+          Content Body:
           <textarea
             rows={7}
             value={body}
