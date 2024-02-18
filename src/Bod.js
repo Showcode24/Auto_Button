@@ -1,26 +1,40 @@
-import { useEffect, useState } from "react";
-import ContentList from "./contentList";
-import useFetch from "./hooks/use-fetch";
+// import { useState } from 'react';
+import Bloglist from './components/bloglist';
+import useFetch from './hooks/use-fetch';
 
-const Bod = () => {
-    
-    const [course, setCourse] = useState('frontend')
+const Home = () => {
+  // const [course, setCourse] = useState('frontend');
 
-  const {contents, error, loading} = useFetch('http://localhost:7000/contents');
+  // const course = 'frontend';
 
-    return (
-        <div className="Bod">
-            <h1>The Furniture <br></br>you would love</h1>
-            {loading && <div>Loading...</div>}
+  const { blogs, error, loading } = useFetch('http://localhost:8000/blogs');
 
-            {error && <div>{error}</div>}
+  // const secret = process.env.REACT_APP_API;
 
-            {contents && <ContentList contents={contents} />}
+  // console.log(secret);
 
-            {/* <button onClick={() => setCourse('backend')}>Click to Change Course</button> */}
+  return (
+    <div className="home">
+      <h2>Home Component</h2>
 
-            <p>{course}</p>
+      <div className="wrapper">
+        <div className="red">
+          red
+          sjkfkvkjvjdsbvksjvbsdkjvbsdvk
         </div>
-    );
-}
-export default Bod;
+        <div className="blue">blue</div>
+        <div className="orange">orange</div>
+      </div>
+
+      {loading && <div>Your item is being fetched</div>}
+
+      {error && <div className="error">{error}</div>}
+
+      {blogs && <Bloglist blogs={blogs} />}
+
+      {/* <p>{course}</p> */}
+    </div>
+  );
+};
+
+export default Home;

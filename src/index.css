@@ -37,7 +37,6 @@
   margin-left: 400px;
   display: flex;
   text-decoration: none;
-  ;
 }
 
 .links-text {
@@ -159,8 +158,7 @@
 .create {
   max-width: 80%;
   margin-top: 100px;
-  /* margin-left: 400px;
-  margin-right: 400px; */
+
   text-align: center;
 }
 
@@ -215,16 +213,3 @@
 
 
 
-/*
-.Button button {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  width: 6cm;
-  height: 1.5cm;
-  background-color: #7c203a;
-  border-radius: 5px;
-  align-content: center;
-  box-shadow: none;
-  cursor: pointer;
-}
-*/

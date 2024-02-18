@@ -1,44 +1,49 @@
-import { useNavigate, useParams } from "react-router";
-import useFetch from "../hooks/use-fetch";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import useFetch from '../hooks/use-fetch';
 
-const ContentDetails = () => {    //you can use another name instead of id
-    const { id } = useParams();
-    const navigate = useNavigate();
-const {
-    contents: content, 
-    error, 
+const BlogDetails = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const {
+    blogs: blog,
+    error,
     loading,
-} = useFetch(`http://localhost:7000/contents/${id}`);
-    
-const handleDelete = (id)=>{
-    axios.delete(`http://localhost:7000/contents/${id}`)
-    .then((res)=>{
-        navigate('/')
-        // console.log(res)
-    })
+  } = useFetch(`http://localhost:8000/blogs/${id}`);
 
-    .then()
-    .catch((err)=>{
-        console.log(err)
-    })
-}
-    return (
-        <div className="content-details">
-            <h2>This is the blog details Component - {id} </h2>
-            {loading && <div>Your item is been fetched</div>}
-            {error && <div>{error}</div>}
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:8000/blogs/${id}`)
+      .then(() => {
+        navigate('/');
+      })
+      .catch(() => {
+      });
+  };
 
-    {content && <article>
-        <h2>{content.title}</h2>
-        <p>{content.author}</p>
-        <div className="article-body">{content.body}</div>
-        <button type="button" onClick={()=>handleDelete(content.id)}>Delete This Blog</button>
-        <Link to={`/edit/${content.id}`}>Edit this blog</Link>
-    </article>}
-        </div>
-    );
-}
+  return (
+    <div className="blog-details">
+      <h2>
+        This is the blog details for blog with id -
+        {id}
+      </h2>
+      {loading && <div> Your item is currently being fetched </div>}
+      {error && <div>{error}</div>}
 
-export default ContentDetails;
+      {blog && (
+        <article>
+          <h2>{blog.title}</h2>
+          <p>{blog.author}</p>
+          <div className="article-body">{blog.body}</div>
+
+          <button type="button" onClick={() => handleDelete(blog.id)}>Delete this blog</button>
+
+          <Link to={`/edit/${blog.id}`}>Edit this blog</Link>
+        </article>
+
+      )}
+    </div>
+  );
+};
+
+export default BlogDetails;

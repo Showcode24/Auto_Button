@@ -1,8 +1,6 @@
 import './App.css';
-// import Toogle from './Toogle';
 import Navbar from './Navbar';
 import Bod from './Bod';
-// import Meth from './Meth';
 import { Routes, Route } from 'react-router-dom';
 
 import About from './component/about';

@@ -1,20 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const ContentList = ({ contents }) => {
-    return (
-        <>
-            {contents.map((contents, index) => (
-                <div className="board" key={contents.id}>
-                    <Link to={`/contents/${contents.id}`} className="link-content">
-                        <h2>Title: {contents.title}</h2>
-                        <p>Written by {contents.author}</p>
-                    </Link>
+const Bloglist = ({ blogs }) => (
+  <>
+    {blogs.map((blog) => (
+      <div className="blog-preview" key={blog.id}>
+        <Link to={`/blogs/${blog.id}`}>
+          <h2>
+            Title is
+            {blog.title}
+          </h2>
+          <p>
+            Written by
+            {blog.author}
+          </p>
+        </Link>
+      </div>
+    ))}
+  </>
+);
 
-                </div>
-            ))}
-        </>
+Bloglist.propTypes = {
+  blogs: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+};
 
-    );
-}
-
-export default ContentList;
+export default Bloglist;

@@ -4,31 +4,19 @@
       "title": "My first blog",
       "body": "This is my first bog post",
       "author": "Ayooluwa",
-      "id": "1"
+      "id": 1
     },
     {
       "title": "My Second blog",
       "body": "This is my second bog post",
       "author": "Emmanuel",
-      "id": "2"
+      "id": 2
     },
     {
       "title": "My Second blog",
       "body": "This is my second bog post",
       "author": "Tobi",
-      "id": "2"
-    },
-    {
-      "id": "86d6",
-      "title": "wewewew",
-      "author": "Ayooluwa",
-      "body": "rtrtrtrtrtrt"
-    },
-    {
-      "id": "4896",
-      "title": "eererer",
-      "author": "Tobi",
-      "body": "dfdfdffdaafadf"
+      "id": 3
     }
-  ]
+      ]
 }
