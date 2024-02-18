@@ -1,36 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const useFetch = (url) => {
+  const [contents, setContents] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true); // true false
 
-    const [contents, setContents] = useState(null);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw Error('Server is busy. Please try again later.');
+          }
+          return response.json();
+        })
+        .then((item) => {
+          setContents(item);
+          setLoading(false);
+        })
+        .catch((e) => {
+          // console.log(e.message);
+          setError(e.message);
+          setLoading(false);
+        });
+    }, 1000);
+  }, [url]); // include url as a dependency to revent infinite loop
 
-    // 'http://localhost:7000/contents'
-
-    useEffect(() => {
-        setTimeout(() => {
-            fetch(url)
-                .then((response) => {
-                    if (!response.ok) {
-                        throw Error('Service is currently busy. Please try again later')
-                    }
-                    return response.json()
-                })
-                .then((contentsArray) => {
-                    setContents(contentsArray)
-                    setLoading(false)
-                })
-                .catch((err) => {
-                    console.log(err.message)
-                    setError(err.message)
-                    setLoading(false)
-                })
-        }, 3000)
-    }, [url]); //empty dependency array => run once
-
-    return {contents, error, loading} 
-
-}
+  return { contents, error, loading };
+};
 
 export default useFetch;

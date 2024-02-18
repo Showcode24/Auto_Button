@@ -1,21 +1,21 @@
 // import { useState } from 'react';
-import Bloglist from './components/bloglist';
+import ContentList from "./contentList";
 import useFetch from './hooks/use-fetch';
 
-const Home = () => {
+const Bod = () => {
   // const [course, setCourse] = useState('frontend');
 
   // const course = 'frontend';
 
-  const { blogs, error, loading } = useFetch('http://localhost:8000/blogs');
+  const { contents, error, loading } = useFetch('http://localhost:7000/contents');
 
   // const secret = process.env.REACT_APP_API;
 
   // console.log(secret);
 
   return (
-    <div className="home">
-      <h2>Home Component</h2>
+    <div className="Bod">
+      <h1>The Furniture <br></br>you would love</h1>
 
       <div className="wrapper">
         <div className="red">
@@ -30,11 +30,11 @@ const Home = () => {
 
       {error && <div className="error">{error}</div>}
 
-      {blogs && <Bloglist blogs={blogs} />}
+      {contents && <ContentList contents={contents} />}
 
       {/* <p>{course}</p> */}
     </div>
   );
 };
 
-export default Home;
+export default Bod;

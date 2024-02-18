@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Bloglist = ({ blogs }) => (
+const ContentList = ({ contents }) => (
   <>
-    {blogs.map((blog) => (
-      <div className="blog-preview" key={blog.id}>
-        <Link to={`/blogs/${blog.id}`}>
+    {contents.map((content) => (
+      <div className="board" key={content.id}>
+        <Link to={`/contents/${contents.id}`} className='link-content'>
           <h2>
-            Title is
-            {blog.title}
+            Title:
+            {contents.title}
           </h2>
           <p>
-            Written by
-            {blog.author}
+            Written by:
+            {content.author}
           </p>
         </Link>
       </div>
@@ -20,7 +20,7 @@ const Bloglist = ({ blogs }) => (
   </>
 );
 
-Bloglist.propTypes = {
+ContentList.propTypes = {
   blogs: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -31,4 +31,4 @@ Bloglist.propTypes = {
   ).isRequired,
 };
 
-export default Bloglist;
+export default ContentList;

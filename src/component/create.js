@@ -29,8 +29,8 @@ const Create = () => {
     setTimeout(() => {
       const newBlog = { title, author, body };
 
-      const postUrl = 'http://localhost:8000/blogs';
-      const putUrl = `http://localhost:8000/blogs/${id}`;
+      const postUrl = 'http://localhost:7000/contents';
+      const putUrl = `http://localhost:7000/contents/${id}`;
 
       const resolvedUrl = id ? putUrl : postUrl;
 
